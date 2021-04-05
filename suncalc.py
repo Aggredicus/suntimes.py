@@ -65,3 +65,5 @@ with open(filename, 'w') as csvfile:
 
     # writing the data rows
     csvwriter.writerows(rows)
+               
+print("File saved to User folder as " + filename)
