@@ -23,7 +23,6 @@ s = sun(city.observer, date=datetime.date(2009, 4, 22))
 #     f'Dusk:    {s["dusk"]}\n'
 # ))
 
-current_year = 2021
 sunrise_list = []
 sunset_list = []
 date_list = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12],[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]]
