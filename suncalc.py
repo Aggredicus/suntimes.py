@@ -5,9 +5,9 @@ from astral import LocationInfo
 import datetime
 from astral.sun import sun
 
-current_year = int(input("What year's sun data are you looking for?"))
-current_latitude = float(input("What is your location's latitude, as a unitless decimal value?"))
-current_longitude = float(input("What is your location's longitude, as a unitless decimal value?"))
+current_year = int(input("What year's sun data are you looking for? "))
+current_latitude = float(input("What is your location's latitude, as a unitless decimal value? "))
+current_longitude = float(input("What is your location's longitude, as a unitless decimal value?" ))
 
 city = LocationInfo("Grand Rapids", "USA", "Eastern", current_latitude, current_longitude)
 
@@ -72,6 +72,6 @@ with open(filename, 'w', newline='') as csvfile:
     writer.writerow(fields)
 
     # writing the data rows
-    writer.writerows(rows)
+    writer.writerow(rows)
 
 print("File saved to User folder as " + filename)
