@@ -36,17 +36,18 @@ sunset_list = []
 date_list = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]]
 
 
-for j in range(0,11):
+for j in range(0,12):
     for i in range(1, date_list[1][j] + 1):
         query_month = date_list[0][j]
+        print(query_month)
         query_day = i
         # query_date = str(current_year) + "," + str(date_list[0][j]) + "," + str(i)
         s = sun(city.observer, date=datetime.date(current_year, query_month, query_day))
         sunrise_list.append(f'{s["sunrise"]}')
         sunset_list.append(f'{s["sunset"]}')
 
-print(sunrise_list)
-print(sunset_list)
+# print(sunrise_list)
+# print(sunset_list)
 
 # Saves a .csv file to Desktop\User\Aggredicus
 ## Currently doesn't actually separate out into rows
