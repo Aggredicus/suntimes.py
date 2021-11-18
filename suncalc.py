@@ -2,9 +2,9 @@ from astral import LocationInfo
 import datetime
 from astral.sun import sun
 
-current_year = 2021
-current_latitude = 42.9547653619083
-current_longitude = -85.68138301630442
+current_year = input("What year's sun data are you looking for?")
+current_latitude = input("What is your location's latitude, as a unitless decimal value?")
+current_longitude = input("What is your location's longitude, as a unitless decimal value?")
 
 city = LocationInfo("Grand Rapids", "USA", "Eastern", current_latitude, current_longitude)
 # print((
@@ -53,7 +53,7 @@ rows = [ [sunrise_list],
          [sunset_list] ]
 
 # name of csv file
-filename = "2021_suntimes.csv"
+filename = f"{current_year}_suntimes.csv"
 
 # writing to csv file
 with open(filename, 'w') as csvfile:
