@@ -1,3 +1,6 @@
+# suncalc.py generates a CSV file for annual sunrise and sundown data
+# using the "astral" Python package found here: https://astral.readthedocs.io/en/latest/index.html#
+
 from astral import LocationInfo
 import datetime
 from astral.sun import sun
@@ -7,6 +10,9 @@ current_latitude = input("What is your location's latitude, as a unitless decima
 current_longitude = input("What is your location's longitude, as a unitless decimal value?")
 
 city = LocationInfo("Grand Rapids", "USA", "Eastern", current_latitude, current_longitude)
+
+# Template code from astral docs
+#
 # print((
 #     f"Information for {city.name}/{city.region}\n"
 #     f"Timezone: {city.timezone}\n"
@@ -15,6 +21,8 @@ city = LocationInfo("Grand Rapids", "USA", "Eastern", current_latitude, current_
 
 s = sun(city.observer, date=datetime.date(2009, 4, 22))
 
+# Template code from astral docs
+#
 # print((
 #     f'Dawn:    {s["dawn"]}\n'
 #     f'Sunrise: {s["sunrise"]}\n'
