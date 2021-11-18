@@ -25,9 +25,9 @@ s = sun(city.observer, date=datetime.date(2009, 4, 22))
 
 sunrise_list = []
 sunset_list = []
-date_list = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12],[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]]
+date_list = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]]
 
-# For some reason, this doesn't iterate all the way through to December... I'll fix this later, lol
+
 for j in range(0,11):
     for i in range(1, date_list[1][j] + 1):
         query_month = date_list[0][j]
@@ -65,5 +65,5 @@ with open(filename, 'w') as csvfile:
 
     # writing the data rows
     csvwriter.writerows(rows)
-               
+
 print("File saved to User folder as " + filename)
