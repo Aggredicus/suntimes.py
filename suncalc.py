@@ -64,14 +64,14 @@ rows = [ [sunrise_list],
 filename = f"{current_year}_suntimes.csv"
 
 # writing to csv file
-with open(filename, 'w') as csvfile:
+with open(filename, 'w', newline='') as csvfile:
     # creating a csv writer object
-    csvwriter = csv.writer(csvfile)
+    writer = csv.writer(csvfile)
 
     # writing the fields
-    csvwriter.writerow(fields)
+    writer.writerow(fields)
 
     # writing the data rows
-    csvwriter.writerows(rows)
+    writer.writerows(rows)
 
 print("File saved to User folder as " + filename)
